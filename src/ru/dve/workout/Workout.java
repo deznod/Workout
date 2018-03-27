@@ -3,6 +3,10 @@ package ru.dve.workout;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Учебная программа, которая считает максимальный заработок за еденицу времени.
+ * @author Dubinin Vlad 15IT18
+ */
 public class Workout {
     static Scanner sc = new Scanner(System.in);
 
@@ -11,12 +15,12 @@ public class Workout {
         int time;
         System.out.println("Введите время: ");
         time = sc.nextInt();
-        Arrays.sort(arr);
-        for (int i : arr) {
+        Arrays.sort(arr);//Сортировка массива
+        for (int i : arr) { // Ввыод элементов массива
             System.out.println("Элементы массива " + i);
         }
         int sum = 0;
-        for (int i = arr.length - 1; arr.length - i <= time; i--) {
+        for (int i = arr.length - 1; arr.length - i <= time; i--) {// Сумма элементов массива за еденицу времени
             sum = sum + arr[i];
         }
         System.out.println("Сумма " + sum);
